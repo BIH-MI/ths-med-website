@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THS-MED TrustDeck</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	
+	<!-- Favicons -->
+	<link rel="icon" href="../media/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="../media/favicon.ico" type="image/x-icon">
+	<link rel="icon" type="image/png" sizes="16x16" href="../media/favicon-16x16.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="../media/favicon-32x32.png">
+	<link rel="apple-touch-icon" href="../media/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="../media/android-chrome-192x192.png">
+	<link rel="icon" type="image/png" sizes="512x512" href="../media/android-chrome-512x512.png">
+</head>
+
+<body style="margin-bottom: -25px;">
+	<!-- Header -->
+	<nav class="navbar navbar-expand-lg bg-secondary sticky-top">
+		<div class="container">
+			<a class="navbar-brand" href="#"><img src="../media/trustdeck.png" alt="trustdeck-logo" width="40" height="40">&ensp;<b>TrustDeck</b></a>
+			
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav ms-auto">
+					<!-- TODO: was initially unsuccessfully tested in Bootstrap 4.3.X  -->
+					<!-- <li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="darkModeDropdown" role="button"
+							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-sun-fill" viewBox="0 0 16 16">
+								<path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+							</svg>
+						</a>
+						<div class="dropdown-menu" aria-labelledby="darkModeDropdown">
+							<a class="dropdown-item active" href="#">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sun-fill" viewBox="0 0 16 16">
+									<path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+								</svg>
+								Light
+								&emsp;
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+									<path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+								</svg>
+							</a>
+							<a class="dropdown-item" href="#">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon-stars-fill" viewBox="0 0 16 16">
+									<path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+									<path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
+								</svg>
+								Dark
+							</a>
+						</div>
+					</li> -->
+					
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-translate" viewBox="0 0 16 16">
+								<path d="M4.545 6.714 4.11 8H3l1.862-5h1.284L8 8H6.833l-.435-1.286H4.545zm1.634-.736L5.5 3.956h-.049l-.679 2.022H6.18z"/>
+								<path d="M0 2a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v3h3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-3H2a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H2zm7.138 9.995c.193.301.402.583.63.846-.748.575-1.673 1.001-2.768 1.292.178.217.451.635.555.867 1.125-.359 2.08-.844 2.886-1.494.777.665 1.739 1.165 2.93 1.472.133-.254.414-.673.629-.89-1.125-.253-2.057-.694-2.82-1.284.681-.747 1.222-1.651 1.621-2.757H14V8h-3v1.047h.765c-.318.844-.74 1.546-1.272 2.13a6.066 6.066 0 0 1-.415-.492 1.988 1.988 0 0 1-.94.31z"/>
+							</svg>
+						</a>
+						<div class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+							<a class="dropdown-item active" href="#">
+								🇩🇪 Deutsch
+								&emsp;
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+									<path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+								</svg>
+							</a>
+							<a class="dropdown-item" href="../en/index.html">🇬🇧 English</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<!-- Content -->
+	<div class="container mt-5">	
+
+		<h1 class="text-center"><a href="index.html" style="text-decoration: none; color: inherit;">THS-MED 🛡 TrustDeck</a></h1>
+		<p class="text-center"><a href="index.html" style="text-decoration: none; color: inherit;"><b>Open-Source-Werkzeuge für Treuhandstellen in der Translationalen Medizin</b></a></p>
+
+		<div class="row mt-4">
+			<div class="row mt-4">
+				<div class="col-md-4">
+					<div class="card h-100 shadow-lg">
+						<div class="card-body d-flex flex-column">
+							<div class="mb-auto">
+								<h5 class="card-title">♠ ACE</h5>
+								<strong>Advanced Confidentiality Engine</strong>
+								<p class="card-text mt-2" style="text-align: justify;">
+									ACE bietet eine robuste Lösung für Pseudonymisierungsdienste und zeichnet sich durch seine hohe Skalierbarkeit und einen integrierten Audit-Trail aus. Seine Architektur ermöglicht die Bildung von Domänenhierarchien mit vererbbaren Eigenschaften, die sowohl Konfigurations- als auch Anpassungsfähigkeiten bieten. Ergänzt durch eine moderne REST-Schnittstelle und ein responsives graphisches Frontend, ist ACE bestens für die Nutzung durch Treuhänderpersonal sowie die Integration in Dataverarbeitungspipelines geeignet.
+								</p>
+							</div>
+							<a href="https://github.com/TrustDeck" class="btn btn-primary mt-2" target="_blank" rel="noopener noreferrer">Erfahren Sie mehr!</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="card h-100 shadow-lg">
+						<div class="card-body d-flex flex-column">
+							<div class="mb-auto">
+								<h5 class="card-title">🤴 KING</h5>
+								<strong>Key Index of Names and General Identification Numbers</strong>
+								<p class="card-text mt-2" style="text-align: justify;">
+									KING bietet fortgeschrittene Funktionen im Bereich Identitätsmanagement. Es ist hochskalierbar und in hohem Maße konfigurierbar. Verschiedene Record-Linkage-Verfahren sind integriert, um die Bedürfnisse unterschiedlicher Anwendungsfälle abzudecken. Eine moderne REST-Schnittstelle und das responsive graphische Frontend sorgen für eine effiziente und benutzerfreundliche Nutzung durch Treuhänderpersonal und erlauben die Integration in Datenverarbeitungspipelines.
+								</p>
+							</div>
+							<a href="#" class="btn btn-secondary mt-2 disabled" tabindex="-1" aria-disabled="true">Noch in Entwicklung befindlich</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="card h-100 shadow-lg">
+						<div class="card-body d-flex flex-column">
+							<div class="mb-auto">
+								<h5 class="card-title">❤️ HEART</h5>
+								<strong>Holistic Electronic Agreement Recording Tool</strong>
+								<p class="card-text mt-2" style="text-align: justify;">
+									HEART ist ein spezialisiertes Tool zur elektronischen Erfassung und Verwaltung von Einwilligungsdokumenten. Es ist flexibel konfigurierbar, unterstützt die semantische Annotation von Einwilligungsdokumenten und ist für den Einsatz auf Tablets und Mobilgeräten optimiert. Darüber hinaus bietet HEART detaillierte Audit-Logs, sodass jede Zustimmungsänderung genau nachvollzogen werden kann. Durch die Möglichkeit, individuelle Zustimmungsvorlagen zu erstellen, ist es optimal für unterschiedlichste Anwendungsfälle konfigurierbar.
+								</p>
+							</div>
+							<a href="#" class="btn btn-secondary mt-2 disabled" tabindex="-1" aria-disabled="true">Noch in Entwicklung befindlich</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<br>
+		<br>
+		<h2 class="text-center">Projektpartner</h1>
+
+		<div class="row mt-4">
+			<div class="col-md-6">
+				<div class="card h-100 shadow-lg">
+					<div class="card-body d-flex flex-column">
+						<div class="mb-auto">
+							<h5 class="card-title">AG Medizininformatik des BIH</h5>
+							<p class="card-text mt-2" style="text-align: justify;">
+								Die AG Medizininformatik koordiniert das Projekt und trägt zum Design und der Implementierung der Services von THS-MED TrustDeck sowie der Evaluation bei.
+							</p>
+						</div>
+						<a href="https://mi.bihealth.org" class="btn btn-secondary mt-2" target="_blank" rel="noopener noreferrer">Webseite der BIH AG Medizininformatik</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6">
+				<div class="card h-100 shadow-lg">
+					<div class="card-body d-flex flex-column">
+						<div class="mb-auto">
+							<h5 class="card-title">BeLOVE Office des BIH</h5>
+							<p class="card-text mt-2" style="text-align: justify;">
+								Das BeLOVE Office leitet die im Aufbau befindliche unabhängige Treuhandstelle, trägt zum Design und der Implementierung der Services von THS-MED TrustDeck bei und bringt insbesondere auch die Erfahrungen aus dem Betrieb von Treuhänderservices ein.
+							</p>
+						</div>
+						<a href="https://www.bihealth.org/de/forschung/projekte/belove/contact/contact-person" class="btn btn-secondary mt-2" target="_blank" rel="noopener noreferrer">Webseite des BeLOVE Office</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<br>
+		<br>
+		<h2 class="text-center">Projektrelevante Publikationen</h1>
+			
+		<div class="row mt-4 d-flex align-items-stretch">
+			<div class="col-md-12 d-flex align-items-stretch">
+				<div class="card shadow-lg">
+					<div class="card-body">
+						<ul>
+							<li class="mb-3">
+								B Buchner, AC Haber, HK Hahn, <strong>F Prasser</strong>, H Kusch, U Sax, CO Schmidt. Das Modell der Datentreuhand in der medizinischen Forschung. Datenschutz und Datensicherheit-DuD 45, 806-810
+							</li>
+							<li class="mb-3">
+								R Bild, M Bialke, K Buckow, T Ganslandt, K Ihrig, R Jahns, ..., <strong>F Prasser</strong>. Towards a comprehensive and interoperable representation of consent-based data usage permissions in the German medical informatics initiative. BMC Medical Informatics and Decision Making 20, 1-9
+							</li>
+							<li class="mb-3">
+								F Kohlmayer, R Lautenschläger, <strong>F Prasser</strong>. Pseudonymization for research data collection: is the juice worth the squeeze? BMC medical informatics and decision making 19 (1), 1-7
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Footer -->
+	<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top bg-light">
+		<div class="container d-flex align-items-center">
+			<div class="row justify-content-between align-items-center">
+				<p class="col-12 col-md-4 mb-0 text-body-secondary text-center text-md-start">
+					&copy; 2023 Berlin Institute of Health
+				</p>
+	
+				<div class="col-12 col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 text-center">
+					<img src="../media/BMBF-Logo.svg" alt="BMBF Logo" width="275px">
+					<span>Gefördert vom Bundesministerium für Bildung und Forschung unter der Fördernummer 16DTM215.</span>
+				</div>
+	
+				<ul class="nav col-12 col-md-4 justify-content-center justify-content-md-end">
+					<li class="nav-item"><a href="imprint.html" class="nav-link px-2 text-body-secondary">Impressum</a></li>
+					<li class="nav-item mx-0 mt-2">&vert;</li>
+					<li class="nav-item"><a href="privacy.html" class="nav-link px-2 text-body-secondary">Datenschutz</a></li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+
+</body>
+</html>
