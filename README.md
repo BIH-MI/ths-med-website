@@ -1,6 +1,6 @@
 # THS-MED Website
 
-Welcome to the THS-MED website repository! This repository contains all the code and resources related to the THS-MED project website hosted on [ths-med.de](ths-med.de).
+Welcome to the THS-MED website repository! This repository contains all the code and resources related to the THS-MED project website hosted on [ths-med.de](https://ths-med.de).
 
 <img src="./media/trustdeck.png" alt="THS-MED Logo" width="75" height="75"/>
 
