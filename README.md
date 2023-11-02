@@ -1,6 +1,6 @@
 # THS-MED Website
 
-Welcome to the THS-MED website repository! This repository contains all the code and resources related to the THS-MED project website hosted on s-bih-mi-hub01.
+Welcome to the THS-MED website repository! This repository contains all the code and resources related to the THS-MED project website hosted on [ths-med.de](ths-med.de).
 
 <img src="./media/trustdeck.png" alt="THS-MED Logo" width="75" height="75"/>
 
@@ -9,8 +9,9 @@ Welcome to the THS-MED website repository! This repository contains all the code
 THS-MED is a project to create modern solutions for pseudonymization and patient registration funded by the Federal Ministry of Education and Research (BMBF). The website serves as the central hub for all information, updates, and resources related to THS-MED.
 
 ## Features:
-- English and German subsites
-- No external css or js files needed
+- Bootstrap 5 - based responsive design
+- English and German sub-sites
+- No css or js files
 
 ## Setup & Installation
 
